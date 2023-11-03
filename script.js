@@ -36,7 +36,14 @@ function rot13(encodedStr)
 
 	for(let i = 0; i < encodedStr.length; i++)
 	{
-		decodedArr += lookup[encodedStr[i]];
+		if(lookup[encodedStr[i]])
+		{
+			decodedArr += lookup[encodedStr[i]];	
+		}
+		else
+		{
+			decodedArr += str[i];
+		}
 	}
 	return decodedArr;
 }
