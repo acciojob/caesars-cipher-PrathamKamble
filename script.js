@@ -29,16 +29,16 @@ const lookup = {
   ",": ",",
 };
 
-function rot13(encodedStr) 
+function rot13(Str) 
 {
-	encodedStr = encodedStr.toUpperCase();
+	Str = Str.toUpperCase();
 	let decodedArr = ""; // Your Result goes here
 
-	for(let i = 0; i < encodedStr.length; i++)
+	for(let i = 0; i < Str.length; i++)
 	{
-		if(lookup[encodedStr[i]])
+		if(lookup[Str[i]])
 		{
-			decodedArr += lookup[encodedStr[i]];	
+			decodedArr += lookup[Str[i]];	
 		}
 		else
 		{
